@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Super Adventure", "Super Adventure\Super Adventure.csproj", "{80900287-612F-43F1-9102-9FDDCBB3527D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Super Adventure", "Super Adventure\Super Adventure.csproj", "{80900287-612F-43F1-9102-9FDDCBB3527D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{4A81B774-F97C-4FB4-8E64-4A499F5F79B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engine", "Engine\Engine.csproj", "{4A81B774-F97C-4FB4-8E64-4A499F5F79B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperAdventure.ViewModels", "SuperAdventure.ViewModels\SuperAdventure.ViewModels.csproj", "{5E7B442D-E21D-40B5-8A4B-F6BCAA871F26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperAdventure.Models", "SuperAdventure.Models\SuperAdventure.Models.csproj", "{12AD68B5-4340-4655-AA0E-FC3B2DF6F062}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperAdventure.Services", "SuperAdventure.Services\SuperAdventure.Services.csproj", "{8A77844E-958B-4001-AA5A-96E92DB97829}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{4A81B774-F97C-4FB4-8E64-4A499F5F79B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A81B774-F97C-4FB4-8E64-4A499F5F79B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A81B774-F97C-4FB4-8E64-4A499F5F79B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7B442D-E21D-40B5-8A4B-F6BCAA871F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7B442D-E21D-40B5-8A4B-F6BCAA871F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7B442D-E21D-40B5-8A4B-F6BCAA871F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7B442D-E21D-40B5-8A4B-F6BCAA871F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12AD68B5-4340-4655-AA0E-FC3B2DF6F062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12AD68B5-4340-4655-AA0E-FC3B2DF6F062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12AD68B5-4340-4655-AA0E-FC3B2DF6F062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12AD68B5-4340-4655-AA0E-FC3B2DF6F062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A77844E-958B-4001-AA5A-96E92DB97829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A77844E-958B-4001-AA5A-96E92DB97829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A77844E-958B-4001-AA5A-96E92DB97829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A77844E-958B-4001-AA5A-96E92DB97829}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
