@@ -15,4 +15,8 @@
     <ProjectReference Include="..\SuperAdventure.ViewModels\SuperAdventure.ViewModels.csproj" />
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy “$(SolutionDir)GameFiles\*.*” “$(ProjectDir)$(OutDir)” /s /y" />
+  </Target>
+
 </Project>
