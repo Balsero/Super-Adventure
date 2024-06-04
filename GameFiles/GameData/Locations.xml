@@ -24,7 +24,7 @@
 	<Location X="1" Y="0" Name="Town Gate" ImageName="TownGate.png">
 		<Description><![CDATA[There is a gate here, protecting the town from giant spiders.]]></Description>
 	</Location>
-	<Location X="2" Y="0" Name="Spider Forest" ImageName="Spider.png">
+	<Location X="2" Y="0" Name="Spider Forest" ImageName="SpiderForest.png">
 		<Description><![CDATA[This is the forbidden spider forest. What happens to you if you go there is your own business.]]></Description>
 		<Monsters>
 			<Monster ID="3" Percent="100"/>

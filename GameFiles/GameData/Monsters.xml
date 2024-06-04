@@ -14,7 +14,7 @@
 			<LootItem ID="9004" Percentage="75"/>
 		</LootItems>
 	</Monster>
-	<Monster ID="3" Name="Giant Spider" MaximumHitPoints="10" WeaponID="1503" RewardXP="10" Gold="3" ImageName="GiantSpider.png">
+	<Monster ID="3" Name="Giant Spider" MaximumHitPoints="10" WeaponID="1503" RewardXP="10" Gold="3" ImageName="Spider.png">
 		<Dexterity>12</Dexterity>
 		<LootItems>
 			<LootItem ID="9005" Percentage="25"/>
