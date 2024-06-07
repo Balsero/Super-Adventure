@@ -18,6 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SuperAdventure.Models\SuperAdventure.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="GameData\GameDetails.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -5,13 +5,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
-using Engine.EventArgs;
-using Engine.Models;
-using Engine.Services;
+using SuperAdventure.Models.EventArgs;
 using Engine.ViewModels;
 using Microsoft.Win32;
 using Super_Adventure.Windows;
 using WPFUI;
+using Engine.Models;
+using Engine.Services;
 
 namespace Super_Adventure
 {
@@ -22,12 +22,15 @@ namespace Super_Adventure
         private readonly Dictionary<Key, Action> _userInputActions =
             new Dictionary<Key, Action>();
         private GameSession _gameSession;
+        private Player player;
+
         public MainWindow(Player player, int xLocation = 0, int yLocation = 0)
         {
             InitializeComponent();
             InitializeUserInputActions();
             SetActiveGameSessionTo(new GameSession(player, xLocation, yLocation));
         }
+
         private void OnClick_MoveNorth(object sender, RoutedEventArgs e)
         {
             _gameSession.MoveNorth();
