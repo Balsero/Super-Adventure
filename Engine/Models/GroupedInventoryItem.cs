@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace Engine.Models
 {
-    public class GroupedInventoryItem : BaseNotificationClass
+    public class GroupedInventoryItem : INotifyPropertyChanged
     {
         private GameItem _item;
         private int _quantity;
+
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         public GameItem Item
         {
@@ -17,7 +20,7 @@ namespace Engine.Models
             set
             {
                 _item = value;
-                OnPropertyChanged(nameof(Item));
+             
             }
         }
 
@@ -27,7 +30,7 @@ namespace Engine.Models
             set
             {
                 _quantity = value;
-                OnPropertyChanged(nameof(Quantity));
+                
             }
         }
 

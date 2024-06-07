@@ -1,8 +1,12 @@
-﻿namespace Engine.Models
+﻿using System.ComponentModel;
+namespace Engine.Models
 {
-    public class QuestStatus : BaseNotificationClass
+    public class QuestStatus : INotifyPropertyChanged
     {
         private bool _isCompleted;
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
         public Quest PlayerQuest { get; }
         public bool IsCompleted
         {
@@ -10,7 +14,7 @@
             set
             {
                 _isCompleted = value;
-                OnPropertyChanged();
+                
             }
         }
         public QuestStatus(Quest quest)
