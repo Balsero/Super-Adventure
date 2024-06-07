@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Super_Adventure"
-        xmlns:viewModels="clr-namespace:Engine.ViewModels;assembly=Engine"
+        xmlns:viewModels="clr-namespace:SuperAdventure.ViewModels;assembly=SuperAdventure.ViewModels" 
         d:DataContext="{d:DesignInstance viewModels:CharacterCreationViewModel}"
         mc:Ignorable="d"
         FontSize="11pt"
