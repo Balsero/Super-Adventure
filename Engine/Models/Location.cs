@@ -3,6 +3,7 @@ using System.Linq;
 using Engine.Factories;
 using Engine.Services;
 using Newtonsoft.Json;
+using SuperAdventure.Core;
 namespace Engine.Models
 {
     public class Location

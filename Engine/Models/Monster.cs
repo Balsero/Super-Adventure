@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Engine.Factories;
-using Engine.Services;
+using SuperAdventure.Core;
 namespace Engine.Models
 {
     public class Monster : LivingEntity

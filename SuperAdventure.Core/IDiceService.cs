@@ -1,8 +1,7 @@
-﻿using System;
-using D20Tek.DiceNotation;
+﻿using D20Tek.DiceNotation;
 using D20Tek.DiceNotation.DieRoller;
-namespace SuperAdventure.Core
-{
+using System.ComponentModel;
+namespace SuperAdventure.Core{
     public interface IDiceService
     {
         IDice Dice { get; }

@@ -1,5 +1,6 @@
 ﻿using Engine.Models;
 using Engine.Shared;
+using SuperAdventure.Core;
 namespace Engine.Services
 {
     public static class CombatService

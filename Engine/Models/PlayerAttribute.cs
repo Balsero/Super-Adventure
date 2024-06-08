@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel;
-using Engine.Services;
+using SuperAdventure.Core;
 namespace Engine.Models
 {
     public class PlayerAttribute : INotifyPropertyChanged

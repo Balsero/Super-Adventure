@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="D20Tek.Common" Version="3.8.4" />
+    <PackageReference Include="D20Tek.Common.Standard" Version="3.3.5" />
     <PackageReference Include="D20Tek.DiceNotation.Standard" Version="3.3.2" />
   </ItemGroup>
 

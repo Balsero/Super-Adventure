@@ -1,15 +1,14 @@
-﻿using System;
-using D20Tek.DiceNotation;
+﻿using D20Tek.DiceNotation;
 using D20Tek.DiceNotation.DieRoller;
-using SuperAdventure.Core;
-
+using System;
+using System.ComponentModel;
 namespace SuperAdventure.Core
 {
     public class DiceService : IDiceService
     {
-        private static readonly IDiceService s_instance = new DiceService();
+        private static readonly IDiceService _instance = new DiceService();
         /// <summary>
-        /// Make constructor private to implement singleton pattern.
+        /// Make constructor private to implement singletone pattern.
         /// </summary>
         private DiceService()
         {
@@ -17,7 +16,7 @@ namespace SuperAdventure.Core
         /// <summary>
         /// Static singleton property
         /// </summary>
-        public static IDiceService Instance => s_instance;
+        public static IDiceService Instance => _instance;
         //--- IDiceService implementation
         public IDice Dice { get; } = new Dice();
         public IDieRoller DieRoller { get; private set; } = new RandomDieRoller();
