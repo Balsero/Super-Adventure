@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Linq;
+using System.Collections.Generic;
 using System.Xml;
 using Engine.Models;
 using Newtonsoft.Json.Linq;
@@ -45,6 +46,11 @@ namespace Engine.Shared
             return entity.Attributes
                          .First(pa => pa.Key.Equals(attributeKey,
                                                     StringComparison.CurrentCultureIgnoreCase));
+        }
+        public static List<GameItem> ItemsThatAre(this IEnumerable<GameItem> inventory,
+                                                  GameItem.ItemCategory category)
+        {
+            return inventory.Where(i => i.Category == category).ToList();
         }
     }
 }

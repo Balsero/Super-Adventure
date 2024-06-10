@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
-using SuperAdventure.Models.EventArgs;
+using SuperAdventure.Core;
 using Engine.ViewModels;
 using Microsoft.Win32;
 using Super_Adventure.Windows;

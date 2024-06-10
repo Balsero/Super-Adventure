@@ -1,6 +1,7 @@
 ﻿using System;
 using SuperAdventure.Models.EventArgs;
 using Engine.Services;
+using SuperAdventure.Core;
 namespace Engine.Models
 {
     public class Battle : IDisposable

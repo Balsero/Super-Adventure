@@ -1,6 +1,6 @@
 ﻿using System;
-using SuperAdventure.Models.EventArgs;
-namespace Engine.Services
+
+namespace SuperAdventure.Core
 {
     public class MessageBroker
     {
@@ -16,7 +16,7 @@ namespace Engine.Services
         {
             return s_messageBroker;
         }
-        internal void RaiseMessage(string message)
+        public void RaiseMessage(string message)
         {
             OnMessageRaised?.Invoke(this, new GameMessageEventArgs(message));
         }
