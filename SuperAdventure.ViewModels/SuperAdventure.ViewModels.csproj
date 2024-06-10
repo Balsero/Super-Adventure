@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Engine\Engine.csproj" />
+    
     <ProjectReference Include="..\SuperAdventure.Models\SuperAdventure.Models.csproj" />
     <ProjectReference Include="..\SuperAdventure.Services\SuperAdventure.Services.csproj" />
   </ItemGroup>

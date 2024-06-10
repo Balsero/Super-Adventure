@@ -1,9 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using Engine.Factories;
-using Engine.Models;
-using Engine.Services;
+using SuperAdventure.Services.Factories;
+using SuperAdventure.Models;
+using SuperAdventure.Services;
 namespace SuperAdventure.ViewModels
 {
     public class CharacterCreationViewModel : INotifyPropertyChanged
