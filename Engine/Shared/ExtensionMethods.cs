@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
 using System.Xml;
 using Engine.Models;
 using Newtonsoft.Json.Linq;
@@ -48,7 +49,7 @@ namespace Engine.Shared
                                                     StringComparison.CurrentCultureIgnoreCase));
         }
         public static List<GameItem> ItemsThatAre(this IEnumerable<GameItem> inventory,
-            GameItem.ItemCategory category)
+                                                  GameItem.ItemCategory category)
         {
             return inventory.Where(i => i.Category == category).ToList();
         }
