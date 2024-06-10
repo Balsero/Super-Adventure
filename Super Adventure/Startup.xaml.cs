@@ -4,12 +4,12 @@ using Engine.Models;
 using Engine.Services;
 using Engine.ViewModels;
 using Microsoft.Win32;
-using Super_Adventure;
+
 namespace Super_Adventure
 {
     public partial class Startup : Window
     {
-        private const string SAVE_GAME_FILE_EXTENSION = "soscsrpg";
+        private const string SAVE_GAME_FILE_EXTENSION = "superSave";
         public Startup()
         {
             InitializeComponent();
@@ -32,13 +32,13 @@ namespace Super_Adventure
                 };
             if (openFileDialog.ShowDialog() == true)
             {
-                GameSession gameSession =
+                GameState gameState =
                     SaveGameService.LoadLastSaveOrCreateNew(openFileDialog.FileName);
 
                 MainWindow mainWindow =
-                    new MainWindow(gameSession.CurrentPlayer,
-                                   gameSession.CurrentLocation.XCoordinate,
-                                   gameSession.CurrentLocation.YCoordinate);
+                    new MainWindow(gameState.Player,
+                                   gameState.XCoordinate,
+                                   gameState.YCoordinate);
 
                 mainWindow.Show();
                 Close();

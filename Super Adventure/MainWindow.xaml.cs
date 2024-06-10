@@ -158,7 +158,9 @@ namespace Super_Adventure
                 };
             if (saveFileDialog.ShowDialog() == true)
             {
-                SaveGameService.Save(_gameSession, saveFileDialog.FileName);
+                SaveGameService.Save(new GameState(_gameSession.CurrentPlayer,
+                    _gameSession.CurrentLocation.XCoordinate,
+                    _gameSession.CurrentLocation.YCoordinate), saveFileDialog.FileName);
             }
         }
     }
