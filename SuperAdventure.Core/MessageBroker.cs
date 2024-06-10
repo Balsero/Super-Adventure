@@ -1,6 +1,6 @@
 ﻿using System;
-using SuperAdventure.Models.EventArgs;
-namespace Engine.Services
+
+namespace SuperAdventure.Core
 {
     public class MessageBroker
     {

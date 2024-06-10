@@ -12,6 +12,7 @@ using Super_Adventure.Windows;
 using WPFUI;
 using Engine.Models;
 using Engine.Services;
+using SuperAdventure.Core;
 
 namespace Super_Adventure
 {

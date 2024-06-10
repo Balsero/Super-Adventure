@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-namespace SuperAdventure.Services
+namespace SuperAdventure.Core
 {
     public static class LoggingService
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SuperAdventure.Models.EventArgs
+namespace SuperAdventure.Core
 {
     public class GameMessageEventArgs : System.EventArgs
     {
