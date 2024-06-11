@@ -1,13 +1,12 @@
-﻿using System.IO;
-using System.Xml;
+﻿using System.Xml;
 using SuperAdventure.Models;
 using SuperAdventure.Models.Shared;
 namespace SuperAdventure.Services.Factories
 {
-    internal static class WorldFactory
+    public static class WorldFactory
     {
         private const string GAME_DATA_FILENAME = ".\\GameData\\Locations.xml";
-        internal static World CreateWorld()
+        public static World CreateWorld()
         {
             World world = new World();
             if (File.Exists(GAME_DATA_FILENAME))

@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-namespace SuperAdventure.Models
+﻿namespace SuperAdventure.Models
 {
     public class World
     {
         private readonly List<Location> _locations = new List<Location>();
-        internal void AddLocation(Location location)
+        public void AddLocation(Location location)
         {
             _locations.Add(location);
         }

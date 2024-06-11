@@ -1,6 +1,4 @@
-﻿using System;
-using SuperAdventure.Models.EventArgs;
-using SuperAdventure.Services;
+﻿using SuperAdventure.Models.EventArgs;
 using SuperAdventure.Core;
 using SuperAdventure.Models.Shared;
 namespace SuperAdventure.Models
