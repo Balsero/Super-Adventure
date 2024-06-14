@@ -13,8 +13,14 @@ namespace Super_Adventure
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
+    /// <seealso cref="System.Windows.Application" />
     public partial class App : Application
     {
+        /// <summary>
+        /// Handles the OnDispatcherUnhandledException event of the App control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="DispatcherUnhandledExceptionEventArgs"/> instance containing the event data.</param>
         private void App_OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             string exceptionMessageText =

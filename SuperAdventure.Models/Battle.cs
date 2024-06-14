@@ -3,17 +3,47 @@ using SuperAdventure.Core;
 using SuperAdventure.Models.Shared;
 namespace SuperAdventure.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="System.IDisposable" />
     public class Battle : IDisposable
     {
+        /// <summary>
+        /// The message broker
+        /// </summary>
         private readonly MessageBroker _messageBroker = MessageBroker.GetInstance();
+        /// <summary>
+        /// The player
+        /// </summary>
         private readonly Player _player;
+        /// <summary>
+        /// The opponent
+        /// </summary>
         private readonly Monster _opponent;
+        /// <summary>
+        /// 
+        /// </summary>
         private enum Combatant
         {
+            /// <summary>
+            /// The player
+            /// </summary>
             Player,
+            /// <summary>
+            /// The opponent
+            /// </summary>
             Opponent
         }
+        /// <summary>
+        /// Occurs when [on combat victory].
+        /// </summary>
         public event EventHandler<CombatVictoryEventArgs> OnCombatVictory;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Battle"/> class.
+        /// </summary>
+        /// <param name="player">The player.</param>
+        /// <param name="opponent">The opponent.</param>
         public Battle(Player player, Monster opponent)
         {
             _player = player;
@@ -28,6 +58,9 @@ namespace SuperAdventure.Models
                 AttackPlayer();
             }
         }
+        /// <summary>
+        /// Attacks the opponent.
+        /// </summary>
         public void AttackOpponent()
         {
             if (_player.CurrentWeapon == null)
@@ -41,12 +74,20 @@ namespace SuperAdventure.Models
                 AttackPlayer();
             }
         }
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        /// </summary>
         public void Dispose()
         {
             _player.OnActionPerformed -= OnCombatantActionPerformed;
             _opponent.OnActionPerformed -= OnCombatantActionPerformed;
             _opponent.OnKilled -= OnOpponentKilled;
         }
+        /// <summary>
+        /// Called when [opponent killed].
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         private void OnOpponentKilled(object sender, System.EventArgs e)
         {
             _messageBroker.RaiseMessage("");
@@ -62,14 +103,28 @@ namespace SuperAdventure.Models
             }
             OnCombatVictory?.Invoke(this, new CombatVictoryEventArgs());
         }
+        /// <summary>
+        /// Attacks the player.
+        /// </summary>
         private void AttackPlayer()
         {
             _opponent.UseCurrentWeaponOn(_player);
         }
+        /// <summary>
+        /// Called when [combatant action performed].
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="result">The result.</param>
         private void OnCombatantActionPerformed(object sender, string result)
         {
             _messageBroker.RaiseMessage(result);
         }
+        /// <summary>
+        /// Firsts the attacker.
+        /// </summary>
+        /// <param name="player">The player.</param>
+        /// <param name="opponent">The opponent.</param>
+        /// <returns></returns>
         private static Combatant FirstAttacker(Player player, Monster opponent)
         {
             // Formula is: ((Dex(player)^2 - Dex(monster)^2)/10) + Random(-10/10)

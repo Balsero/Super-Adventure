@@ -6,9 +6,18 @@ using SuperAdventure.Models;
 using SuperAdventure.Models.Shared;
 namespace SuperAdventure.Services.Factories
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class RecipeFactory
     {
+        /// <summary>
+        /// The game data filename
+        /// </summary>
         private const string GAME_DATA_FILENAME = ".\\GameData\\Recipes.xml";
+        /// <summary>
+        /// The recipes
+        /// </summary>
         private static readonly List<Recipe> _recipes = new List<Recipe>();
         static RecipeFactory()
         {
@@ -23,6 +32,10 @@ namespace SuperAdventure.Services.Factories
                 throw new FileNotFoundException($"Missing data file: {GAME_DATA_FILENAME}");
             }
         }
+        /// <summary>
+        /// Loads the recipes from nodes.
+        /// </summary>
+        /// <param name="nodes">The nodes.</param>
         private static void LoadRecipesFromNodes(XmlNodeList nodes)
         {
             foreach (XmlNode node in nodes)
@@ -46,6 +59,11 @@ namespace SuperAdventure.Services.Factories
                 _recipes.Add(recipe);
             }
         }
+        /// <summary>
+        /// Recipes the by identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns></returns>
         public static Recipe RecipeByID(int id)
         {
             return _recipes.FirstOrDefault(x => x.ID == id);

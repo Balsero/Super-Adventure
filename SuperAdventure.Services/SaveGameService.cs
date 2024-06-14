@@ -7,8 +7,16 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 namespace SuperAdventure.Services
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class SaveGameService
     {
+        /// <summary>
+        /// Saves the specified game state.
+        /// </summary>
+        /// <param name="gameState">State of the game.</param>
+        /// <param name="fileName">Name of the file.</param>
         public static void Save(GameState gameState, string fileName)
         {
             File.WriteAllText(fileName,
@@ -36,6 +44,11 @@ namespace SuperAdventure.Services
                 throw new FormatException($"Error reading: {fileName}");
             }
         }
+        /// <summary>
+        /// Creates the player.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
         private static Player CreatePlayer(JObject data)
         {
             Player player =
@@ -50,6 +63,11 @@ namespace SuperAdventure.Services
             PopulatePlayerRecipes(data, player);
             return player;
         }
+        /// <summary>
+        /// Gets the player attributes.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
         private static IEnumerable<PlayerAttribute> GetPlayerAttributes(JObject data)
         {
             List<PlayerAttribute> attributes =
@@ -67,6 +85,11 @@ namespace SuperAdventure.Services
             return attributes;
         }
 
+        /// <summary>
+        /// Populates the player inventory.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="player">The player.</param>
         private static void PopulatePlayerInventory(JObject data, Player player)
         {
             foreach (JToken itemToken in (JArray)data[nameof(GameState.Player)]
@@ -77,6 +100,11 @@ namespace SuperAdventure.Services
                 player.AddItemToInventory(ItemFactory.CreateGameItem(itemId));
             }
         }
+        /// <summary>
+        /// Populates the player quests.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="player">The player.</param>
         private static void PopulatePlayerQuests(JObject data, Player player)
         {
             foreach (JToken questToken in (JArray)data[nameof(GameState.Player)]
@@ -90,6 +118,11 @@ namespace SuperAdventure.Services
                 player.Quests.Add(questStatus);
             }
         }
+        /// <summary>
+        /// Populates the player recipes.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="player">The player.</param>
         private static void PopulatePlayerRecipes(JObject data, Player player)
         {
             foreach (JToken recipeToken in

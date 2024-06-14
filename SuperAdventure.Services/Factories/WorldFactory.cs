@@ -3,8 +3,14 @@ using SuperAdventure.Models;
 using SuperAdventure.Models.Shared;
 namespace SuperAdventure.Services.Factories
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class WorldFactory
     {
+        /// <summary>
+        /// The game data filename
+        /// </summary>
         private const string GAME_DATA_FILENAME = ".\\GameData\\Locations.xml";
         public static World CreateWorld()
         {
@@ -26,6 +32,12 @@ namespace SuperAdventure.Services.Factories
             }
             return world;
         }
+        /// <summary>
+        /// Loads the locations from nodes.
+        /// </summary>
+        /// <param name="world">The world.</param>
+        /// <param name="rootImagePath">The root image path.</param>
+        /// <param name="nodes">The nodes.</param>
         private static void LoadLocationsFromNodes(World world, string rootImagePath, XmlNodeList nodes)
         {
             if (nodes == null)
@@ -46,6 +58,11 @@ namespace SuperAdventure.Services.Factories
                 world.AddLocation(location);
             }
         }
+        /// <summary>
+        /// Adds the monsters.
+        /// </summary>
+        /// <param name="location">The location.</param>
+        /// <param name="monsters">The monsters.</param>
         private static void AddMonsters(Location location, XmlNodeList monsters)
         {
             if (monsters == null)
@@ -58,6 +75,11 @@ namespace SuperAdventure.Services.Factories
                                     monsterNode.AttributeAsInt("Percent"));
             }
         }
+        /// <summary>
+        /// Adds the quests.
+        /// </summary>
+        /// <param name="location">The location.</param>
+        /// <param name="quests">The quests.</param>
         private static void AddQuests(Location location, XmlNodeList quests)
         {
             if (quests == null)
@@ -70,6 +92,11 @@ namespace SuperAdventure.Services.Factories
                         .Add(QuestFactory.GetQuestByID(questNode.AttributeAsInt("ID")));
             }
         }
+        /// <summary>
+        /// Adds the trader.
+        /// </summary>
+        /// <param name="location">The location.</param>
+        /// <param name="traderHere">The trader here.</param>
         private static void AddTrader(Location location, XmlNode traderHere)
         {
             if (traderHere == null)

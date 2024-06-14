@@ -4,8 +4,15 @@ using SuperAdventure.Models.Shared;
 using Newtonsoft.Json.Linq;
 namespace SuperAdventure.Services
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class GameDetailsService
     {
+        /// <summary>
+        /// Reads the game details.
+        /// </summary>
+        /// <returns></returns>
         public static GameDetails ReadGameDetails()
         {
             JObject gameDetailsJson =

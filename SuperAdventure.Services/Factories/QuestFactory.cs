@@ -6,9 +6,18 @@ using SuperAdventure.Models;
 using SuperAdventure.Models.Shared;
 namespace SuperAdventure.Services.Factories
 {
+    /// <summary>
+    /// 
+    /// </summary>
     internal static class QuestFactory
     {
+        /// <summary>
+        /// The game data filename
+        /// </summary>
         private const string GAME_DATA_FILENAME = ".\\GameData\\Quests.xml";
+        /// <summary>
+        /// The quests
+        /// </summary>
         private static readonly List<Quest> _quests = new List<Quest>();
         static QuestFactory()
         {
@@ -23,6 +32,10 @@ namespace SuperAdventure.Services.Factories
                 throw new FileNotFoundException($"Missing data file: {GAME_DATA_FILENAME}");
             }
         }
+        /// <summary>
+        /// Loads the quests from nodes.
+        /// </summary>
+        /// <param name="nodes">The nodes.</param>
         private static void LoadQuestsFromNodes(XmlNodeList nodes)
         {
             foreach (XmlNode node in nodes)
@@ -49,6 +62,11 @@ namespace SuperAdventure.Services.Factories
                                       rewardItems));
             }
         }
+        /// <summary>
+        /// Gets the quest by identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns></returns>
         internal static Quest GetQuestByID(int id)
         {
             return _quests.FirstOrDefault(quest => quest.ID == id);

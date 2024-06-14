@@ -9,10 +9,22 @@ using SuperAdventure.Models.Shared;
 using SuperAdventure.Core;
 namespace SuperAdventure.Services.Factories
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class MonsterFactory
     {
+        /// <summary>
+        /// The game data filename
+        /// </summary>
         private const string GAME_DATA_FILENAME = ".\\GameData\\Monsters.xml";
+        /// <summary>
+        /// The s game details
+        /// </summary>
         private static readonly GameDetails s_gameDetails;
+        /// <summary>
+        /// The s base monsters
+        /// </summary>
         private static readonly List<Monster> s_baseMonsters = new List<Monster>();
         static MonsterFactory()
         {
@@ -32,6 +44,11 @@ namespace SuperAdventure.Services.Factories
                 throw new FileNotFoundException($"Missing data file: {GAME_DATA_FILENAME}");
             }
         }
+        /// <summary>
+        /// Gets the monster from location.
+        /// </summary>
+        /// <param name="location">The location.</param>
+        /// <returns></returns>
         public static Monster GetMonsterFromLocation(Location location)
         {
             if (!location.MonstersHere.Any())
@@ -58,6 +75,11 @@ namespace SuperAdventure.Services.Factories
             // If there was a problem, return the last monster in the list.
             return GetMonster(location.MonstersHere.Last().MonsterID);
         }
+        /// <summary>
+        /// Loads the monsters from nodes.
+        /// </summary>
+        /// <param name="nodes">The nodes.</param>
+        /// <param name="rootImagePath">The root image path.</param>
         private static void LoadMonstersFromNodes(XmlNodeList nodes, string rootImagePath)
         {
             if (nodes == null)
@@ -94,6 +116,11 @@ namespace SuperAdventure.Services.Factories
                 s_baseMonsters.Add(monster);
             }
         }
+        /// <summary>
+        /// Gets the monster.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns></returns>
         private static Monster GetMonster(int id)
         {
             Monster newMonster = s_baseMonsters.FirstOrDefault(m => m.ID == id).Clone();

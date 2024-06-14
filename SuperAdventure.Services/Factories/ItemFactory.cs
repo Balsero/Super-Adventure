@@ -7,9 +7,18 @@ using SuperAdventure.Models;
 using SuperAdventure.Models.Shared;
 namespace SuperAdventure.Services.Factories
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class ItemFactory
     {
+        /// <summary>
+        /// The game data filename
+        /// </summary>
         private const string GAME_DATA_FILENAME = ".\\GameData\\GameItems.xml";
+        /// <summary>
+        /// The standard game items
+        /// </summary>
         private static readonly List<GameItem> _standardGameItems = new List<GameItem>();
         static ItemFactory()
         {
@@ -26,10 +35,19 @@ namespace SuperAdventure.Services.Factories
                 throw new FileNotFoundException($"Missing data file: {GAME_DATA_FILENAME}");
             }
         }
+        /// <summary>
+        /// Creates the game item.
+        /// </summary>
+        /// <param name="itemTypeID">The item type identifier.</param>
+        /// <returns></returns>
         public static GameItem CreateGameItem(int itemTypeID)
         {
             return _standardGameItems.FirstOrDefault(item => item.ItemTypeID == itemTypeID)?.Clone();
         }
+        /// <summary>
+        /// Loads the items from nodes.
+        /// </summary>
+        /// <param name="nodes">The nodes.</param>
         private static void LoadItemsFromNodes(XmlNodeList nodes)
         {
             if (nodes == null)
@@ -60,6 +78,11 @@ namespace SuperAdventure.Services.Factories
                 _standardGameItems.Add(gameItem);
             }
         }
+        /// <summary>
+        /// Determines the item category.
+        /// </summary>
+        /// <param name="itemType">Type of the item.</param>
+        /// <returns></returns>
         private static GameItem.ItemCategory DetermineItemCategory(string itemType)
         {
             switch (itemType)
