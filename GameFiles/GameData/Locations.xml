@@ -8,6 +8,9 @@
 	</Location>
 	<Location X="-1" Y="-1" Name="Farmer's House" ImageName="Farmhouse.png">
 		<Description><![CDATA[This is the fields of your uncle Max.There are rown of corn growing here , with giant rats hiding between them]]></Description>
+		<Quests>
+			<Quest ID="3"/>
+		</Quests>
 		<Trader ID="2"/>
 	</Location>
 	<Location X="0" Y="-1" Name="Home" ImageName="Home.png">
@@ -23,6 +26,9 @@
 	</Location>
 	<Location X="1" Y="0" Name="Town Gate" ImageName="TownGate.png">
 		<Description><![CDATA[There is a gate here, protecting the town from giant spiders.]]></Description>
+		<Quests>
+			<Quest ID="2"/>
+		</Quests>
 	</Location>
 	<Location X="2" Y="0" Name="Spider Forest" ImageName="SpiderForest.png">
 		<Description><![CDATA[This is the forbidden spider forest. What happens to you if you go there is your own business.]]></Description>

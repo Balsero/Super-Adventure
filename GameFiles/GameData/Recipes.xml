@@ -10,4 +10,24 @@
 			<Item ID="2001" Quantity="1"/>
 		</OutputItems>
 	</Recipe>
+		<Recipe ID="2">
+		<Name><![CDATA[Corn Pie]]></Name>
+		<Ingredients>
+			<Item ID="3004" Quantity="2"/> <!-- Corn -->
+			<Item ID="3005" Quantity="1"/> <!-- Meat -->
+		</Ingredients>
+		<OutputItems>
+			<Item ID="2002" Quantity="1"/> <!-- Corn Pie -->
+		</OutputItems>
+	</Recipe>
+	<Recipe ID="3">
+		<Name><![CDATA[Spider Leg Potion]]></Name>
+		<Ingredients>
+			<Item ID="9007" Quantity="8"/> <!-- Legs -->
+			
+		</Ingredients>
+		<OutputItems>
+			<Item ID="2003" Quantity="1"/> <!-- Corn Pie -->
+		</OutputItems>
+	</Recipe>
 </Recipes>
