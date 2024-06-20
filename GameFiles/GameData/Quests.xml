@@ -14,7 +14,7 @@
 		<Name><![CDATA[Defend the Town Gate]]></Name>
 		<Description><![CDATA[Defeat the giant spider threatening the Town Gate.]]></Description>
 		<ItemsToComplete>
-			<Item ID="9005" Quantity="15"/> <!-- Spider fang -->
+			<Item ID="9005" Quantity="2"/> <!-- Spider fang -->
 		</ItemsToComplete>
 		<RewardItems>
 			<Item ID="1003" Quantity="1"/> 
@@ -24,7 +24,7 @@
 		<Name><![CDATA[Protect the Farmer's House]]></Name>
 		<Description><![CDATA[Defeat the rats infesting the Farmer's House.]]></Description>
 		<ItemsToComplete>
-			<Item ID="9003" Quantity="10"/> <!-- Rat tail -->
+			<Item ID="9003" Quantity="1"/> <!-- Rat tail -->
 		</ItemsToComplete>
 		<RewardItems>
 			<Item ID="2002" Quantity="10"/> 
