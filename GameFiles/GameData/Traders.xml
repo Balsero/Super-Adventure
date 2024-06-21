@@ -4,8 +4,8 @@
 		<Name><![CDATA[Morton the Trader]]></Name>
 		<InventoryItems>
 			<Item ID="1001" Quantity="1"/>
-			<Item ID="1003" Quantity="5"/>
-			<Item ID="1004" Quantity="5"/>
+			<Item ID="1003" Quantity="1"/>
+			<Item ID="1004" Quantity="1"/>
 			
 		</InventoryItems>
 	</Trader>
@@ -13,19 +13,19 @@
 		<Name><![CDATA[Farmer Max]]></Name>
 		<InventoryItems>
 			<Item ID="1001" Quantity="1"/>
-			<Item ID="3004" Quantity="10"/> <!-- Corn -->
-			<Item ID="3005" Quantity="5"/> <!-- Meat -->
+			<Item ID="3004" Quantity="50"/> <!-- Corn -->
+			<Item ID="3005" Quantity="50"/> <!-- Meat -->
 		</InventoryItems>
 	</Trader>
 	<Trader ID="3">
 		<Name><![CDATA[Jasmine the Herbalist]]></Name>
 		<InventoryItems>
 			<Item ID="1001" Quantity="1"/>
-			<Item ID="2004" Quantity="10"/> <!-- Leaf bandage -->
-			<Item ID="2003" Quantity="5"/> <!-- Spider Leg Potion -->
-			<Item ID="3001" Quantity="5"/> 
-			<Item ID="3002" Quantity="5"/> 
-			<Item ID="3003" Quantity="5"/> 
+			<Item ID="2004" Quantity="50"/> <!-- Leaf bandage -->
+			<Item ID="2003" Quantity="50"/> <!-- Spider Leg Potion -->
+			<Item ID="3001" Quantity="50"/> 
+			<Item ID="3002" Quantity="50"/> 
+			<Item ID="3003" Quantity="50"/> 
 			
 		</InventoryItems>
 	</Trader>

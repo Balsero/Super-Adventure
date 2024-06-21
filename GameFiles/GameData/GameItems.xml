@@ -3,7 +3,7 @@
 	<Weapons>
 		<Weapon ID="1001" Name="Pointy stick" Price="1" DamageDice="1d2"/>
 		<Weapon ID="1002" Name="Rusty sword" Price="5" DamageDice="1d3"/>
-		<Weapon ID="1003" Name="Sword" Price="100" DamageDice="1d15"/>
+		<Weapon ID="1003" Name="Sword" Price="100" DamageDice="5d15"/>
 		<Weapon ID="1004" Name="Axe" Price="50" DamageDice="1d8"/>
 		<Weapon ID="1501" Name="Snake fang" Price="0" DamageDice="1d2"/>
 		<Weapon ID="1502" Name="Rat claw" Price="0" DamageDice="1d2"/>
@@ -14,7 +14,7 @@
 	<HealingItems>
 		<HealingItem ID="2001" Name="Granola bar" Price="5" HitPointsToHeal="3"/>
 		<HealingItem ID="2002" Name="Corn Pie" Price="10" HitPointsToHeal="5"/>
-		<HealingItem ID="2003" Name="Spider Leg Potion" Price="150" HitPointsToHeal="10"/>
+		<HealingItem ID="2003" Name="Spider Leg Potion" Price="150" HitPointsToHeal="1000"/>
 		<HealingItem ID="2004" Name="Leaf bandage" Price="2" HitPointsToHeal="2"/>
 	</HealingItems>
 	<MiscellaneousItems>
